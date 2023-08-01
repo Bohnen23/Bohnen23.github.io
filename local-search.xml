@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Mac 系统下 Hexo+Github 搭建 Blog 小白遇坑全记录</title>
+    <link href="/post/51e9c87.html"/>
+    <url>/post/51e9c87.html</url>
+    
+    <content type="html"><![CDATA[<p>用 Mac 前，曾用 Windows 搭建过，不得不说，Mac 明显比 Windows 简单，步骤如下：</p><h2 id="创建本地环境"><a href="#创建本地环境" class="headerlink" title="创建本地环境"></a>创建本地环境</h2><h3 id="1、安装-Node-js"><a href="#1、安装-Node-js" class="headerlink" title="1、安装 Node.js"></a>1、安装 Node.js</h3><h3 id="2、安装-Git"><a href="#2、安装-Git" class="headerlink" title="2、安装 Git"></a>2、安装 Git</h3><p>这两个步骤不赘述，检验是否安装成功，命令如下：</p><blockquote><p>node -v</p><p>git -v</p></blockquote><p>分别显示版本信息，证明已经安装成功。</p><h3 id="3、安装-Hexo"><a href="#3、安装-Hexo" class="headerlink" title="3、安装 Hexo"></a>3、安装 Hexo</h3><p>打开 Mac 的 Terminal 页面（找不到的可以电脑搜索，或者 google 方法）</p><p>Step 1，在 Terminal 页面中输入如下命令：</p><blockquote><p>sudo npm install hexo-cli -g</p></blockquote><p><strong>这里有一个坑</strong></p><p>大多数引导用的命令是：</p><blockquote><p>npm install hexo-cli -g</p></blockquote><p>而我用这个一定报错，加上 sudo 就顺利完成。假如加 sudo 报错的话，就去掉试试。</p><p>Step 2，创建并初始化博客项目 —— Blog （这个名字可以换其他，比如 Myblog，那么下面 cd 后名字和这个要一致）</p><blockquote><p>hexo init Blog</p></blockquote><p>Step 3，切换到博客项目 —— Blog 中（如果上面取了 Myblog，这里就是 cd Myblog）</p><blockquote><p>cd Blog</p></blockquote><p>Step 4，安装</p><blockquote><p>sudo npm install</p></blockquote><p>跟上面一样，假如报错，就去掉 sudo</p><h3 id="4、本地预览"><a href="#4、本地预览" class="headerlink" title="4、本地预览"></a>4、本地预览</h3><p>生成静态网站，并在本地预览，命令如下：</p><blockquote><p>hexo g</p></blockquote><blockquote><p>hexo s</p></blockquote><p>这时会生成一个网站 <a href="http://localhost:4000/">http://localhost:4000</a></p><p>打开后这个样子：</p><p>!(<a href="https://res.cloudinary.com/practicaldev/image/fetch/s--G4Og80Kd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://miaryrabs.madatsara.com/images/nodejs-blog-powered-hexo_images/ee6dec68.jpeg">https://res.cloudinary.com/practicaldev/image/fetch/s--G4Og80Kd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://miaryrabs.madatsara.com/images/nodejs-blog-powered-hexo_images/ee6dec68.jpeg</a>)</p><h3 id="5、发文试试"><a href="#5、发文试试" class="headerlink" title="5、发文试试"></a>5、发文试试</h3><p>Step 1，新建一篇题目是「第一篇」的文章</p><blockquote><p>hexo new 第一篇</p></blockquote><p>Step 2，新建的文章默认放到 source&#x2F;_posts&#x2F; 之下，.md 格式。找到文档：</p><blockquote><p>title:  第一篇</p><p>date: 2023-07-28 20:40:10</p><p>tags:</p></blockquote><p>Step 3，编辑这个 md 文档，添加【## 第一次搭建 Blog，感到好茫然】</p><blockquote><p>title:  第一篇</p><p>date: 2023-07-28 20:40:10</p><p>tags:</p><p>##（空格）第一次搭建 Blog，感到好茫然。</p></blockquote><p>Step 4，打开 <a href="http://localhost:4000/">http://localhost:4000</a></p><h2 id="搭建-Github-页面"><a href="#搭建-Github-页面" class="headerlink" title="搭建 Github 页面"></a>搭建 Github 页面</h2><p>Step 1，先注册一个 Github 账号</p><p>Step 2，登录 Github，创建一个仓库。具体方法不赘述，网上有很多解说，很简单。</p><p>最终创建一个名字「username.github.io」的仓库。</p><p>hexo 生成的本地静态网站推送至「username.github.io」仓库，方法如下：</p><p>Step 3，打开本地创建的 Blog 文件夹里的 _config.yml，加入以下命令：</p><blockquote><p>deploy:</p><p> type: git</p><p> repo: <a href="http://github.com/username/username.github.io.git">http://github.com/username/username.github.io.git</a></p><p> branch: master</p></blockquote><p><strong>注意：上面的 username 都要改成你的 Github 用户名和仓库名，以及上面命令 type repo branch 后必须加一个空格。</strong></p><p>Step 4，执行部署</p><blockquote><p>hexo d</p></blockquote><p>这时报错</p><blockquote><p>ERROR Deployer not found: git</p></blockquote><p>就安装一个插件 hexo-deployer-git</p><blockquote><p>sudo npm install hexo-deployer-git -s</p></blockquote><p>继续</p><blockquote><p>hexo d</p></blockquote><p>这步成功后，hexo 生成的本地静态网站就被推送到了 Github 搭建的仓库中，打开 <a href="http://username.github.io/">http://username.github.io</a> 查看。</p><p>至此，Hexo+Github 搭建 Blog 迈出成功第一步。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>搭建Blog</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
