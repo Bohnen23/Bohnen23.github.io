@@ -1,0 +1,776 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s1.ax1x.com/2023/08/02/pPCLHQs.jpg">
+  <link rel="icon" href="https://s1.ax1x.com/2023/08/02/pPCLHQs.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Bohnen">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Blog 搭建完，接着把默认「丑」主题 landscape 换掉。google 「hexo themes」，第一个链接： https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;index.html  找个顺眼的，或搜索有哪些受欢迎的 hexo 主题。 简中界用最多的是 Next 和 Butterfly，都不喜欢，因为页面太花哨。其实很多功能用不上，可以设置 false 关了，还是有点儿繁琐，我想找一款整洁">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac 系统下 Hexo+Github Blog（2）更换主题 - instapaper、Omega、Fluid">
+<meta property="og:url" content="http://bohnen23.github.io/2023/08/06/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/index.html">
+<meta property="og:site_name" content="Bohnen">
+<meta property="og:description" content="Blog 搭建完，接着把默认「丑」主题 landscape 换掉。google 「hexo themes」，第一个链接： https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;index.html  找个顺眼的，或搜索有哪些受欢迎的 hexo 主题。 简中界用最多的是 Next 和 Butterfly，都不喜欢，因为页面太花哨。其实很多功能用不上，可以设置 false 关了，还是有点儿繁琐，我想找一款整洁">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-05T22:56:21.000Z">
+<meta property="article:modified_time" content="2023-08-10T23:11:28.771Z">
+<meta property="article:author" content="Bohnen">
+<meta property="article:tag" content="搭建Blog">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Mac 系统下 Hexo+Github Blog（2）更换主题 - instapaper、Omega、Fluid - Bohnen</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"bohnen23.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Bohnen Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://s1.ax1x.com/2023/08/02/pPCLV2j.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Mac 系统下 Hexo+Github Blog（2）更换主题 - instapaper、Omega、Fluid"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-08-06 00:56" pubdate>
+          2023年8月6日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          19 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Mac 系统下 Hexo+Github Blog（2）更换主题 - instapaper、Omega、Fluid</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>Blog 搭建完，接着把默认「丑」主题 landscape 换掉。google 「hexo themes」，第一个链接：</p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/themes/index.html">https://hexo.io/themes/index.html</a> </p>
+<p>找个顺眼的，或搜索有哪些受欢迎的 hexo 主题。</p>
+<p>简中界用最多的是 Next 和 Butterfly，都不喜欢，因为页面太花哨。其实很多功能用不上，可以设置 false 关了，还是有点儿繁琐，我想找一款整洁简单风格的主题。</p>
+<h2 id="instapaper"><a href="#instapaper" class="headerlink" title="instapaper"></a>instapaper</h2><p>instapaper 最合意。</p>
+<p>Demo：<a target="_blank" rel="noopener" href="https://techmovie.xyz/">https://techmovie.xyz</a></p>
+<p>Github：<a target="_blank" rel="noopener" href="https://github.com/techmovie/hexo-theme-instapaper">https://github.com/techmovie/hexo-theme-instapaper</a></p>
+<p>安装设置很简单，文件清晰明了。</p>
+<p>出现的第一个坑：</p>
+<p>按照步骤操作完，输入</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></table></figure>
+
+<p>localhost：4000 报错：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">extends</span> <span class="hljs-keyword">includes</span><span class="hljs-regexp">/layout.pug block content include ./i</span>ncludes<span class="hljs-regexp">/mixins/</span>post-ui.pug #recent-posts.recent-posts +postUI <span class="hljs-keyword">include</span> <span class="hljs-keyword">includes</span>/pagination.pug<br></code></pre></td></tr></table></figure>
+
+<p><strong>解决方法：</strong></p>
+<p>Step 1，输入代码</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">sudo npm <span class="hljs-keyword">install </span>--save hexo-renderer-<span class="hljs-keyword">jade </span>hexo-generator-feed hexo-generator-sitemap hexo-<span class="hljs-keyword">browsersync </span>hexo-generator-archive<br></code></pre></td></tr></table></figure>
+
+<p>Step 2，以上运行后，再输入</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> clean<br><br>hexo g --<span class="hljs-literal">debug</span><br><br>hexo s<br></code></pre></td></tr></table></figure>
+
+<p>就能解决，主题功能少，需要装的插件编写者没列全。</p>
+<p>第二个坑：</p>
+<p>新建第一篇文章，输入</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haxe">hexo <span class="hljs-keyword">new</span> <span class="hljs-type"></span>第一篇文章<br></code></pre></td></tr></table></figure>
+
+<p>题目如果是英文，运行正常；如果是中文，就会报错。</p>
+<p><strong>解决方法：</strong></p>
+<p>打开 Blog 下的 _config.yml（不是 _config.fluid.yml），加入一段代码</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta"># abbrlink config</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol">abbrlink:</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol"> alg:</span> crc32 <span class="hljs-meta"># 算法：crc16(default) and crc32</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol"> rep:</span> hex <span class="hljs-meta"># 进制: dec(default) and hex</span><br></code></pre></td></tr></table></figure>
+
+<p>问题就能解决，同样还是因为主题功能少，编写者想得不够周到。</p>
+<p>这两个坑填好之后，输入</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> clean<br><br>hexo g --<span class="hljs-literal">debug</span><br><br>hexo s<br><br>hexo d <br></code></pre></td></tr></table></figure>
+
+<p>就会看到主题替换成功。</p>
+<p>instapaper 的优点也是缺点，简洁到缺了很多必要功能，比如搜索、分类、关于。开始文章数量少还觉不出来，以后数量多了就有很多不便之处，因此，instapaper 可以用作练手，无需太多调试，主题很快完成替换，让新手小白成就感十足。</p>
+<h2 id="Omega"><a href="#Omega" class="headerlink" title="Omega"></a>Omega</h2><p>Demo：<a target="_blank" rel="noopener" href="https://www.kavience.com/">https://www.kavience.com</a></p>
+<p>Github：<a target="_blank" rel="noopener" href="https://github.com/kavience/hexo-theme-omega">https://github.com/kavience/hexo-theme-omega</a></p>
+<p>主题编写者的博客做得很好，功能齐全，还没有多余。但很大缺点是，编写者的安装文档写得很不清楚，要点带过，让人摸不着头脑。博客的文章内容也是这个风格，就像学霸给学渣讲题，默认读者很多知识点一说就懂。</p>
+<p>我连猜带蒙地搞定了，可调试不好，比如文章下的信息显示不分行；有个大问题是，因为不知道缺什么插件，我把编者列的那些名字全 hexo，结果是速度变得巨慢，只好删了。即删除整个 Blog 文件夹，删之前，_config.yml 复制保存。</p>
+<p>编写者博客使用很多大幅小李照片，Omega 这个主题的确像小李演的角色：翩翩美少男，说话好听，眼神魅惑，却不太靠谱，只能忍痛割爱了。</p>
+<p>但是博客置顶信息很好，我后来博客图片就是从那里面的免费图库里下载的，置顶博客内容可以保存。</p>
+<h2 id="Fluid"><a href="#Fluid" class="headerlink" title="Fluid"></a>Fluid</h2><p>Demo：<a target="_blank" rel="noopener" href="https://zkqiang.cn/">https://zkqiang.cn</a></p>
+<p>Github：<a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">https://github.com/fluid-dev/hexo-theme-fluid</a></p>
+<p>这个主题之前我在 Windows 搭建时就看上了，但当时三脚猫水平，编写者文档的内容没有理解，误打误撞改成了，进一步的设置就不会了。</p>
+<p>Mac 踩的坑：</p>
+<p>主题里没有 Blog&#x2F;themes，因此也就没有 themes 下的 _config.fluid.yml </p>
+<p>我自作聪明复制了一个 themes，结果无法运行，只好又删了 Blog 文件夹，再次来过。提醒各位小白，出了问题别怵，顶多删了重来，删之前记得把 _config.yml 存档保留。</p>
+<p>其实，它的内容都在 public 里面，_config.fluid.yml 需要自己建一个，再把编写者的内容复制进去。</p>
+<p>修改图片最好的方法是，把图传到图床，修改 _config.fluid.yml，图片http 地址放过去，这样就不影响速度了。</p>
+<p>编写者人数多，一直在优化，坑不多，问题对照手册基本都能解决，文件包简洁，插件齐全，不用手动添加什么。</p>
+<p>编写者的博客是个宝藏，比如有一个微信公众号的 Markdown 文档，翻一翻，挖一挖，慢慢研究修改设置。</p>
+<p>Fluid 是我最满意的主题。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>instapaper 简单好上手，功能少，需要手动添加插件。</p>
+<p>Omega 功能合理齐全，文档不清楚，难以复现。编写者博客置顶文章信息丰富，可保存。</p>
+<p>Fluid 功能合理齐全，文档资料完备，简约不简单，优雅美观，相关资料详实，慢慢学习解锁新功能。</p>
+<p>以后水平提高，可以试着自己制作一款主题，但不太可能超越 Fluid.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%90%AD%E5%BB%BABlog/" class="print-no-link">#搭建Blog</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Mac 系统下 Hexo+Github Blog（2）更换主题 - instapaper、Omega、Fluid</div>
+      <div>http://bohnen23.github.io/2023/08/06/更换主题/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Bohnen</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年8月6日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年8月11日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/08/08/%E6%8A%91%E9%83%81/" title="抑郁症的一个行为特征">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">抑郁症的一个行为特征</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/07/29/%E5%B0%8F%E7%99%BD%E9%81%87%E5%9D%91%E5%85%A8%E8%AE%B0%E5%BD%95/" title="Mac 系统下 Hexo+Github Blog（1） 搭建博客 小白遇坑记录">
+                        <span class="hidden-mobile">Mac 系统下 Hexo+Github Blog（1） 搭建博客 小白遇坑记录</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script type="text/javascript">
+        var disqus_config = function() {
+          this.page.url = 'http://bohnen23.github.io/2023/08/06/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/';
+          this.page.identifier = '/2023/08/06/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/';
+        };
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//' + 'Bohnen' + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', new Date());
+          (d.head || d.body).appendChild(s);
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

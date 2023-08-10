@@ -16,26 +16,24 @@
   <meta name="author" content="Bohnen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="用 Mac 前，曾用 Windows 搭建过，不得不说，Mac 明显比 Windows 简单，步骤如下： 创建本地环境1、安装 Node.js2、安装 Git这两个步骤不赘述，检验是否安装成功，命令如下： node -v git -v 分别显示版本信息，证明已经安装成功。 3、安装 Hexo打开 Mac 的 Terminal 页面（找不到的可以电脑搜索，或者 google 方法） Step 1，在">
+    <meta name="description" content="还没完成设置好主题，就先去网上找买域名的服务了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac 系统下 Hexo+Github Blog（1） 搭建博客 小白遇坑记录">
-<meta property="og:url" content="http://bohnen23.github.io/post/51e9c87.html">
+<meta property="og:title" content="Mac 系统下 Hexo+Github Blog（3）绑定域名 - 在德国买了域名以后如何设置">
+<meta property="og:url" content="http://bohnen23.github.io/2023/08/10/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/index.html">
 <meta property="og:site_name" content="Bohnen">
-<meta property="og:description" content="用 Mac 前，曾用 Windows 搭建过，不得不说，Mac 明显比 Windows 简单，步骤如下： 创建本地环境1、安装 Node.js2、安装 Git这两个步骤不赘述，检验是否安装成功，命令如下： node -v git -v 分别显示版本信息，证明已经安装成功。 3、安装 Hexo打开 Mac 的 Terminal 页面（找不到的可以电脑搜索，或者 google 方法） Step 1，在">
+<meta property="og:description" content="还没完成设置好主题，就先去网上找买域名的服务了。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s1.ax1x.com/2023/08/03/pPiZV3j.jpg">
-<meta property="article:published_time" content="2023-07-28T22:03:00.000Z">
-<meta property="article:modified_time" content="2023-08-06T00:30:28.253Z">
+<meta property="article:published_time" content="2023-08-10T21:57:05.000Z">
+<meta property="article:modified_time" content="2023-08-10T23:11:49.036Z">
 <meta property="article:author" content="Bohnen">
 <meta property="article:tag" content="搭建Blog">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://s1.ax1x.com/2023/08/03/pPiZV3j.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Mac 系统下 Hexo+Github Blog（1） 搭建博客 小白遇坑记录 - Bohnen</title>
+  <title>Mac 系统下 Hexo+Github Blog（3）绑定域名 - 在德国买了域名以后如何设置 - Bohnen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -73,7 +71,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"bohnen23.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"bohnen23.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -83,6 +81,33 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -201,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Mac 系统下 Hexo+Github Blog（1） 搭建博客 小白遇坑记录"></span>
+            <span id="subtitle" data-typed-text="Mac 系统下 Hexo+Github Blog（3）绑定域名 - 在德国买了域名以后如何设置"></span>
           
         </div>
 
@@ -212,8 +237,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-29 00:03" pubdate>
-          2023年7月29日 凌晨
+        <time datetime="2023-08-10 23:57" pubdate>
+          2023年8月10日 晚上
         </time>
       </span>
     
@@ -224,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          24 字
         
       </span>
     
@@ -235,7 +260,7 @@
         
         
         
-          13 分钟
+          1 分钟
         
       </span>
     
@@ -280,78 +305,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Mac 系统下 Hexo+Github Blog（1） 搭建博客 小白遇坑记录</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2023年8月6日 凌晨
-                  
-                
-              </p>
+            <h1 id="seo-header">Mac 系统下 Hexo+Github Blog（3）绑定域名 - 在德国买了域名以后如何设置</h1>
             
             
               <div class="markdown-body">
                 
-                <p>用 Mac 前，曾用 Windows 搭建过，不得不说，Mac 明显比 Windows 简单，步骤如下：</p>
-<h2 id="创建本地环境"><a href="#创建本地环境" class="headerlink" title="创建本地环境"></a>创建本地环境</h2><h3 id="1、安装-Node-js"><a href="#1、安装-Node-js" class="headerlink" title="1、安装 Node.js"></a>1、安装 Node.js</h3><h3 id="2、安装-Git"><a href="#2、安装-Git" class="headerlink" title="2、安装 Git"></a>2、安装 Git</h3><p>这两个步骤不赘述，检验是否安装成功，命令如下：</p>
-<p><code>node -v</code></p>
-<p><code>git -v</code></p>
-<p>分别显示版本信息，证明已经安装成功。</p>
-<h3 id="3、安装-Hexo"><a href="#3、安装-Hexo" class="headerlink" title="3、安装 Hexo"></a>3、安装 Hexo</h3><p>打开 Mac 的 Terminal 页面（找不到的可以电脑搜索，或者 google 方法）</p>
-<p>Step 1，在 Terminal 页面中输入如下命令：</p>
-<p><code>sudo npm install hexo-cli -g</code></p>
-<p><strong>这里有一个坑</strong></p>
-<p>大多数引导用的命令是：</p>
-<p><code>npm install hexo-cli -g</code></p>
-<p>而我用这个一定报错，加上 sudo 就顺利完成。假如加 sudo 报错的话，就去掉试试。</p>
-<p>Step 2，创建并初始化博客项目 —— Blog （这个名字可以换其他，比如 Myblog，那么下面 cd 后名字和这个要一致）</p>
-<p><code>hexo init Blog</code></p>
-<p>Step 3，切换到博客项目 —— Blog 中（如果上面取了 Myblog，这里就是 cd Myblog）</p>
-<p><code>cd Blog</code></p>
-<p>Step 4，安装</p>
-<p><code>sudo npm install</code></p>
-<p>跟上面一样，假如报错，就去掉 sudo</p>
-<h3 id="4、本地预览"><a href="#4、本地预览" class="headerlink" title="4、本地预览"></a>4、本地预览</h3><p>生成静态网站，并在本地预览，命令如下：</p>
-<p><code>hexo g --debug</code></p>
-<p><code>hexo s</code></p>
-<p>这时会生成一个网站 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></p>
-<p>打开后这个样子：</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pPiZV3j"><img src="https://s1.ax1x.com/2023/08/03/pPiZV3j.jpg" srcset="/img/loading.gif" lazyload alt="pPiZV3j.jpg" border="0" /></a></p>
-<h3 id="5、发文试试"><a href="#5、发文试试" class="headerlink" title="5、发文试试"></a>5、发文试试</h3><p>Step 1，新建一篇题目是「第一篇」的文章</p>
-<p><code>hexo new 第一篇</code></p>
-<p>Step 2，新建的文章默认放到 source&#x2F;_posts&#x2F; 之下，.md 格式。找到文档：</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs subunit">title:  第一篇<br><br>date: 2023<span class="hljs-string">-07</span><span class="hljs-string">-28</span> 20:40:10<br><br><span class="hljs-keyword">tags:</span><br></code></pre></td></tr></table></figure>
-
-<p>Step 3，编辑这个 md 文档，添加【## 第一次搭建 Blog，感到好茫然】</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs subunit">title:  第一篇<br><br>date: 2023<span class="hljs-string">-07</span><span class="hljs-string">-28</span> 20:40:10<br><br><span class="hljs-keyword">tags:</span><br><br>##（空格）第一次搭建 Blog，感到好茫然。<br></code></pre></td></tr></table></figure>
-
-<p>Step 4，打开 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 查看</p>
-<h2 id="搭建-Github-页面"><a href="#搭建-Github-页面" class="headerlink" title="搭建 Github 页面"></a>搭建 Github 页面</h2><p>Step 1，先注册一个 Github 账号</p>
-<p>Step 2，登录 Github，创建一个仓库。具体方法不赘述，网上有很多解说，很简单。</p>
-<p>最终创建一个名字「username.github.io」的仓库。</p>
-<p>hexo 生成的本地静态网站推送至「username.github.io」仓库，方法如下：</p>
-<p>Step 3，打开本地创建的 Blog 文件夹里的 _config.yml，加入以下命令：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol">type:</span> git<br><span class="hljs-symbol"></span><br><span class="hljs-symbol">repo:</span> http:<span class="hljs-comment">//github.com/username/username.github.io.git</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol">branch:</span> master<br></code></pre></td></tr></table></figure>
-
-<p><strong>注意：上面的 username 都要改成你的 Github 用户名和仓库名，以及上面命令 type repo branch 后必须加一个空格。</strong></p>
-<p>Step 4，执行部署</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure>
-
-<p>这时报错</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">ERROR </span>Deployer not found: git<br></code></pre></td></tr></table></figure>
-
-<p>就安装一个插件 hexo-deployer-git</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo npm <span class="hljs-keyword">install</span> hexo-deployer-git -s<br></code></pre></td></tr></table></figure>
-
-<p>继续</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure>
-
-<p>这步成功后，hexo 生成的本地静态网站就被推送到了 Github 搭建的仓库中，打开 <a target="_blank" rel="noopener" href="http://username.github.io/">http://username.github.io</a> 查看。</p>
-<p>至此，Hexo+Github 搭建 Blog 迈出成功第一步。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>完整代码：</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-comment">#显示版本信息，检验是否安装成功</span><br>node -v<br><br>git -v <br><br><span class="hljs-comment">#安装 Hexo</span><br>sudo npm <span class="hljs-keyword">install </span>hexo-cli -g<br><br>hexo init <span class="hljs-keyword">Blog</span><br><span class="hljs-keyword"></span>cd <span class="hljs-keyword">Blog</span><br><span class="hljs-keyword"></span><br>sudo npm <span class="hljs-keyword">install</span><br><span class="hljs-keyword"></span><br><span class="hljs-comment">#本地预览</span><br>hexo clean<br><br>hexo g --<span class="hljs-built_in">debug</span><br><br>hexo s<br><br>hexo d<br></code></pre></td></tr></table></figure>
-
+                <p>还没完成设置好主题，就先去网上找买域名的服务了。</p>
 
                 
               </div>
@@ -397,8 +356,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Mac 系统下 Hexo+Github Blog（1） 搭建博客 小白遇坑记录</div>
-      <div>http://bohnen23.github.io/post/51e9c87.html</div>
+      <div>Mac 系统下 Hexo+Github Blog（3）绑定域名 - 在德国买了域名以后如何设置</div>
+      <div>http://bohnen23.github.io/2023/08/10/绑定域名/</div>
     </div>
     <div class="license-meta">
       
@@ -410,13 +369,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月29日</div>
+          <div>2023年8月10日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年8月6日</div>
+          <div>2023年8月11日</div>
         </div>
       
       
@@ -447,15 +406,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/undefined.html" title="Mac 系统下 Hexo+Github Blog（2）更换主题 - instapaper、Omega、Fluid">
+                      <a href="/2023/08/11/%E6%94%B6%E8%97%8F%E5%AF%BC%E8%88%AA/" title="个人收藏导航">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Mac 系统下 Hexo+Github Blog（2）更换主题 - instapaper、Omega、Fluid</span>
+                        <span class="hidden-mobile">个人收藏导航</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/08/08/%E6%8A%91%E9%83%81/" title="抑郁症的一个行为特征">
+                        <span class="hidden-mobile">抑郁症的一个行为特征</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -467,6 +432,25 @@
   
     <article id="comments" lazyload>
       
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script type="text/javascript">
+        var disqus_config = function() {
+          this.page.url = 'http://bohnen23.github.io/2023/08/10/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/';
+          this.page.identifier = '/2023/08/10/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/';
+        };
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//' + 'Bohnen' + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', new Date());
+          (d.head || d.body).appendChild(s);
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
 
     </article>
   

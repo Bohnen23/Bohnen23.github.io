@@ -4,11 +4,63 @@
   
   
   <entry>
-    <title>抑郁症的一个行为特征</title>
-    <link href="/post/undefined.html"/>
-    <url>/post/undefined.html</url>
+    <title>个人收藏导航</title>
+    <link href="/2023/08/11/%E6%94%B6%E8%97%8F%E5%AF%BC%E8%88%AA/"/>
+    <url>/2023/08/11/%E6%94%B6%E8%97%8F%E5%AF%BC%E8%88%AA/</url>
     
-    <content type="html"><![CDATA[<p>抑郁时人会清楚察觉到，大脑有好几个意见方案，彼此互相矛盾，就像脑子里有好几个小人儿一边吵架，一边发指令，脑子里乱成一锅粥，行为也乱了。</p>]]></content>
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>收藏信息</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>收藏</tag>
+      
+      <tag>导航</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Mac 系统下 Hexo+Github Blog（3）绑定域名 - 在德国买了域名以后如何设置</title>
+    <link href="/2023/08/10/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
+    <url>/2023/08/10/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</url>
+    
+    <content type="html"><![CDATA[<p>还没完成设置好主题，就先去网上找买域名的服务了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>搭建Blog</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>抑郁症的一个行为特征</title>
+    <link href="/2023/08/08/%E6%8A%91%E9%83%81/"/>
+    <url>/2023/08/08/%E6%8A%91%E9%83%81/</url>
+    
+    <content type="html"><![CDATA[<p>抑郁时会感到大脑有好几个不同意见，彼此矛盾，就像好几个小人儿一边吵架，一边发指令，脑子里乱成一锅粥，人一会儿要干这个，一会儿又要干那个，行为也跟着乱了。</p>]]></content>
     
     
     <categories>
@@ -30,8 +82,8 @@
   
   <entry>
     <title>Mac 系统下 Hexo+Github Blog（2）更换主题 - instapaper、Omega、Fluid</title>
-    <link href="/post/undefined.html"/>
-    <url>/post/undefined.html</url>
+    <link href="/2023/08/06/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/"/>
+    <url>/2023/08/06/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/</url>
     
     <content type="html"><![CDATA[<p>Blog 搭建完，接着把默认「丑」主题 landscape 换掉。google 「hexo themes」，第一个链接：</p><p><a href="https://hexo.io/themes/index.html">https://hexo.io/themes/index.html</a> </p><p>找个顺眼的，或搜索有哪些受欢迎的 hexo 主题。</p><p>简中界用最多的是 Next 和 Butterfly，都不喜欢，因为页面太花哨。其实很多功能用不上，可以设置 false 关了，还是有点儿繁琐，我想找一款整洁简单风格的主题。</p><h2 id="instapaper"><a href="#instapaper" class="headerlink" title="instapaper"></a>instapaper</h2><p>instapaper 最合意。</p><p>Demo：<a href="https://techmovie.xyz/">https://techmovie.xyz</a></p><p>Github：<a href="https://github.com/techmovie/hexo-theme-instapaper">https://github.com/techmovie/hexo-theme-instapaper</a></p><p>安装设置很简单，文件清晰明了。</p><p>出现的第一个坑：</p><p>按照步骤操作完，输入</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></table></figure><p>localhost：4000 报错：</p><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">extends</span> <span class="hljs-keyword">includes</span><span class="hljs-regexp">/layout.pug block content include ./i</span>ncludes<span class="hljs-regexp">/mixins/</span>post-ui.pug #recent-posts.recent-posts +postUI <span class="hljs-keyword">include</span> <span class="hljs-keyword">includes</span>/pagination.pug<br></code></pre></td></tr></table></figure><p><strong>解决方法：</strong></p><p>Step 1，输入代码</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">sudo npm <span class="hljs-keyword">install </span>--save hexo-renderer-<span class="hljs-keyword">jade </span>hexo-generator-feed hexo-generator-sitemap hexo-<span class="hljs-keyword">browsersync </span>hexo-generator-archive<br></code></pre></td></tr></table></figure><p>Step 2，以上运行后，再输入</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> clean<br><br>hexo g --<span class="hljs-literal">debug</span><br><br>hexo s<br></code></pre></td></tr></table></figure><p>就能解决，主题功能少，需要装的插件编写者没列全。</p><p>第二个坑：</p><p>新建第一篇文章，输入</p><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haxe">hexo <span class="hljs-keyword">new</span> <span class="hljs-type"></span>第一篇文章<br></code></pre></td></tr></table></figure><p>题目如果是英文，运行正常；如果是中文，就会报错。</p><p><strong>解决方法：</strong></p><p>打开 Blog 下的 _config.yml（不是 _config.fluid.yml），加入一段代码</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta"># abbrlink config</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol">abbrlink:</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol"> alg:</span> crc32 <span class="hljs-meta"># 算法：crc16(default) and crc32</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol"> rep:</span> hex <span class="hljs-meta"># 进制: dec(default) and hex</span><br></code></pre></td></tr></table></figure><p>问题就能解决，同样还是因为主题功能少，编写者想得不够周到。</p><p>这两个坑填好之后，输入</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> clean<br><br>hexo g --<span class="hljs-literal">debug</span><br><br>hexo s<br><br>hexo d <br></code></pre></td></tr></table></figure><p>就会看到主题替换成功。</p><p>instapaper 的优点也是缺点，简洁到缺了很多必要功能，比如搜索、分类、关于。开始文章数量少还觉不出来，以后数量多了就有很多不便之处，因此，instapaper 可以用作练手，无需太多调试，主题很快完成替换，让新手小白成就感十足。</p><h2 id="Omega"><a href="#Omega" class="headerlink" title="Omega"></a>Omega</h2><p>Demo：<a href="https://www.kavience.com/">https://www.kavience.com</a></p><p>Github：<a href="https://github.com/kavience/hexo-theme-omega">https://github.com/kavience/hexo-theme-omega</a></p><p>主题编写者的博客做得很好，功能齐全，还没有多余。但很大缺点是，编写者的安装文档写得很不清楚，要点带过，让人摸不着头脑。博客的文章内容也是这个风格，就像学霸给学渣讲题，默认读者很多知识点一说就懂。</p><p>我连猜带蒙地搞定了，可调试不好，比如文章下的信息显示不分行；有个大问题是，因为不知道缺什么插件，我把编者列的那些名字全 hexo，结果是速度变得巨慢，只好删了。即删除整个 Blog 文件夹，删之前，_config.yml 复制保存。</p><p>编写者博客使用很多大幅小李照片，Omega 这个主题的确像小李演的角色：翩翩美少男，说话好听，眼神魅惑，却不太靠谱，只能忍痛割爱了。</p><p>但是博客置顶信息很好，我后来博客图片就是从那里面的免费图库里下载的，置顶博客内容可以保存。</p><h2 id="Fluid"><a href="#Fluid" class="headerlink" title="Fluid"></a>Fluid</h2><p>Demo：<a href="https://zkqiang.cn/">https://zkqiang.cn</a></p><p>Github：<a href="https://github.com/fluid-dev/hexo-theme-fluid">https://github.com/fluid-dev/hexo-theme-fluid</a></p><p>这个主题之前我在 Windows 搭建时就看上了，但当时三脚猫水平，编写者文档的内容没有理解，误打误撞改成了，进一步的设置就不会了。</p><p>Mac 踩的坑：</p><p>主题里没有 Blog&#x2F;themes，因此也就没有 themes 下的 _config.fluid.yml </p><p>我自作聪明复制了一个 themes，结果无法运行，只好又删了 Blog 文件夹，再次来过。提醒各位小白，出了问题别怵，顶多删了重来，删之前记得把 _config.yml 存档保留。</p><p>其实，它的内容都在 public 里面，_config.fluid.yml 需要自己建一个，再把编写者的内容复制进去。</p><p>修改图片最好的方法是，把图传到图床，修改 _config.fluid.yml，图片http 地址放过去，这样就不影响速度了。</p><p>编写者人数多，一直在优化，坑不多，问题对照手册基本都能解决，文件包简洁，插件齐全，不用手动添加什么。</p><p>编写者的博客是个宝藏，比如有一个微信公众号的 Markdown 文档，翻一翻，挖一挖，慢慢研究修改设置。</p><p>Fluid 是我最满意的主题。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>instapaper 简单好上手，功能少，需要手动添加插件。</p><p>Omega 功能合理齐全，文档不清楚，难以复现。编写者博客置顶文章信息丰富，可保存。</p><p>Fluid 功能合理齐全，文档资料完备，简约不简单，优雅美观，相关资料详实，慢慢学习解锁新功能。</p><p>以后水平提高，可以试着自己制作一款主题，但不太可能超越 Fluid.</p>]]></content>
     
@@ -55,8 +107,8 @@
   
   <entry>
     <title>Mac 系统下 Hexo+Github Blog（1） 搭建博客 小白遇坑记录</title>
-    <link href="/post/51e9c87.html"/>
-    <url>/post/51e9c87.html</url>
+    <link href="/2023/07/29/%E5%B0%8F%E7%99%BD%E9%81%87%E5%9D%91%E5%85%A8%E8%AE%B0%E5%BD%95/"/>
+    <url>/2023/07/29/%E5%B0%8F%E7%99%BD%E9%81%87%E5%9D%91%E5%85%A8%E8%AE%B0%E5%BD%95/</url>
     
     <content type="html"><![CDATA[<p>用 Mac 前，曾用 Windows 搭建过，不得不说，Mac 明显比 Windows 简单，步骤如下：</p><h2 id="创建本地环境"><a href="#创建本地环境" class="headerlink" title="创建本地环境"></a>创建本地环境</h2><h3 id="1、安装-Node-js"><a href="#1、安装-Node-js" class="headerlink" title="1、安装 Node.js"></a>1、安装 Node.js</h3><h3 id="2、安装-Git"><a href="#2、安装-Git" class="headerlink" title="2、安装 Git"></a>2、安装 Git</h3><p>这两个步骤不赘述，检验是否安装成功，命令如下：</p><p><code>node -v</code></p><p><code>git -v</code></p><p>分别显示版本信息，证明已经安装成功。</p><h3 id="3、安装-Hexo"><a href="#3、安装-Hexo" class="headerlink" title="3、安装 Hexo"></a>3、安装 Hexo</h3><p>打开 Mac 的 Terminal 页面（找不到的可以电脑搜索，或者 google 方法）</p><p>Step 1，在 Terminal 页面中输入如下命令：</p><p><code>sudo npm install hexo-cli -g</code></p><p><strong>这里有一个坑</strong></p><p>大多数引导用的命令是：</p><p><code>npm install hexo-cli -g</code></p><p>而我用这个一定报错，加上 sudo 就顺利完成。假如加 sudo 报错的话，就去掉试试。</p><p>Step 2，创建并初始化博客项目 —— Blog （这个名字可以换其他，比如 Myblog，那么下面 cd 后名字和这个要一致）</p><p><code>hexo init Blog</code></p><p>Step 3，切换到博客项目 —— Blog 中（如果上面取了 Myblog，这里就是 cd Myblog）</p><p><code>cd Blog</code></p><p>Step 4，安装</p><p><code>sudo npm install</code></p><p>跟上面一样，假如报错，就去掉 sudo</p><h3 id="4、本地预览"><a href="#4、本地预览" class="headerlink" title="4、本地预览"></a>4、本地预览</h3><p>生成静态网站，并在本地预览，命令如下：</p><p><code>hexo g --debug</code></p><p><code>hexo s</code></p><p>这时会生成一个网站 <a href="http://localhost:4000/">http://localhost:4000</a></p><p>打开后这个样子：</p><p><a href="https://imgse.com/i/pPiZV3j"><img src="https://s1.ax1x.com/2023/08/03/pPiZV3j.jpg" alt="pPiZV3j.jpg" border="0" /></a></p><h3 id="5、发文试试"><a href="#5、发文试试" class="headerlink" title="5、发文试试"></a>5、发文试试</h3><p>Step 1，新建一篇题目是「第一篇」的文章</p><p><code>hexo new 第一篇</code></p><p>Step 2，新建的文章默认放到 source&#x2F;_posts&#x2F; 之下，.md 格式。找到文档：</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs subunit">title:  第一篇<br><br>date: 2023<span class="hljs-string">-07</span><span class="hljs-string">-28</span> 20:40:10<br><br><span class="hljs-keyword">tags:</span><br></code></pre></td></tr></table></figure><p>Step 3，编辑这个 md 文档，添加【## 第一次搭建 Blog，感到好茫然】</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs subunit">title:  第一篇<br><br>date: 2023<span class="hljs-string">-07</span><span class="hljs-string">-28</span> 20:40:10<br><br><span class="hljs-keyword">tags:</span><br><br>##（空格）第一次搭建 Blog，感到好茫然。<br></code></pre></td></tr></table></figure><p>Step 4，打开 <a href="http://localhost:4000/">http://localhost:4000</a> 查看</p><h2 id="搭建-Github-页面"><a href="#搭建-Github-页面" class="headerlink" title="搭建 Github 页面"></a>搭建 Github 页面</h2><p>Step 1，先注册一个 Github 账号</p><p>Step 2，登录 Github，创建一个仓库。具体方法不赘述，网上有很多解说，很简单。</p><p>最终创建一个名字「username.github.io」的仓库。</p><p>hexo 生成的本地静态网站推送至「username.github.io」仓库，方法如下：</p><p>Step 3，打开本地创建的 Blog 文件夹里的 _config.yml，加入以下命令：</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol">type:</span> git<br><span class="hljs-symbol"></span><br><span class="hljs-symbol">repo:</span> http:<span class="hljs-comment">//github.com/username/username.github.io.git</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol">branch:</span> master<br></code></pre></td></tr></table></figure><p><strong>注意：上面的 username 都要改成你的 Github 用户名和仓库名，以及上面命令 type repo branch 后必须加一个空格。</strong></p><p>Step 4，执行部署</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure><p>这时报错</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">ERROR </span>Deployer not found: git<br></code></pre></td></tr></table></figure><p>就安装一个插件 hexo-deployer-git</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo npm <span class="hljs-keyword">install</span> hexo-deployer-git -s<br></code></pre></td></tr></table></figure><p>继续</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure><p>这步成功后，hexo 生成的本地静态网站就被推送到了 Github 搭建的仓库中，打开 <a href="http://username.github.io/">http://username.github.io</a> 查看。</p><p>至此，Hexo+Github 搭建 Blog 迈出成功第一步。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>完整代码：</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-comment">#显示版本信息，检验是否安装成功</span><br>node -v<br><br>git -v <br><br><span class="hljs-comment">#安装 Hexo</span><br>sudo npm <span class="hljs-keyword">install </span>hexo-cli -g<br><br>hexo init <span class="hljs-keyword">Blog</span><br><span class="hljs-keyword"></span>cd <span class="hljs-keyword">Blog</span><br><span class="hljs-keyword"></span><br>sudo npm <span class="hljs-keyword">install</span><br><span class="hljs-keyword"></span><br><span class="hljs-comment">#本地预览</span><br>hexo clean<br><br>hexo g --<span class="hljs-built_in">debug</span><br><br>hexo s<br><br>hexo d<br></code></pre></td></tr></table></figure>]]></content>
     
