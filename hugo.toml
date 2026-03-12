@@ -1,0 +1,22 @@
+baseURL = "https://example.com/"
+languageCode = "zh-CN"
+title = "书简与散步"
+
+# 不使用外部主题，用项目内的 layouts 和 static
+
+[params]
+  author = "Hui"
+  description = "写给孩子，写给自己，写给所有在路上的人。"
+  footer_quote = "人生如逆旅，我亦是行人。"
+  email = "hui@example.com"
+
+[taxonomies]
+  category = "categories"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[permalinks]
+  posts = "/:slug/"
